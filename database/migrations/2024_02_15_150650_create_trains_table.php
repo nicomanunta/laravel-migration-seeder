@@ -24,6 +24,7 @@ return new class extends Migration
             $table->integer('number_of_carriages');
             $table->boolean('in_time');
             $table->boolean('deleted')->default(false);
+            $table->timestamps(); 
         
         });
     }
