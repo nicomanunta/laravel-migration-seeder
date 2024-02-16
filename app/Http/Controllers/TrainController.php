@@ -9,8 +9,8 @@ use App\Models\Train;
 class TrainController extends Controller
 {
     public function index(){
-        $today = '2024-02-15';
-        $trains = Train::whereDate('departure_time', $today)->get();;
+        
+        $trains = Train::where('departure_time', '=', now())->get();;
         return view('home', compact('trains'));
     }
 }
